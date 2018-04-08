@@ -8,19 +8,30 @@ Page({
         options: []
     },
     onLoad() {
-        this.setData({
-            options: app.globalData.options
-        })
-        this.refresh()
+        //从题库随机获取5道题
+        let globalOptions = app.globalData.options;
+        let options = []
+        let i = 0;
+        while (i < 5) {
+            let index = Math.floor(Math.random() * globalOptions.length)
+            if (!options.includes(globalOptions[index])) {
+                options.push(globalOptions[index])
+                i++
+            }
+        }
+        this.setData({ options })
+        this.reduceOption()
     },
     submit(e) {
-        this.refresh()
+        this.reduceOption()
     },
-    refresh() {
+    reduceOption() {
         let options = this.data.options
         let index = this.data.index
         if (index >= options.length) {
-            return
+            wx.showModal({
+                title: '显示结果'
+            })
         } else {
             this.setData({
                 title: options[index].title,
