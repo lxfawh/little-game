@@ -1,10 +1,34 @@
+const app = getApp()
 Page({
     data: {
-        title: 'TITLE',
-        content: 'CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT ',
-        footer: 'FOOTER'
+        index: 0,
+        title: '',
+        option: [],
+        footer: '',
+        options: []
     },
-    onLoad(){
-        
+    onLoad() {
+        this.setData({
+            options: app.globalData.options
+        })
+        this.refresh()
+    },
+    submit(e) {
+        this.refresh()
+    },
+    refresh() {
+        let options = this.data.options
+        let index = this.data.index
+        if (index >= options.length) {
+            return
+        } else {
+            this.setData({
+                title: options[index].title,
+                option: options[index].option,
+                footer: options[index].footer
+            })
+            index++
+            this.setData({ index })
+        }
     }
 })

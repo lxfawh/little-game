@@ -13,15 +13,22 @@ page {
 
 .title {
     width: 100%;
-    /* background: #ccc; */
+    box-sizing: border-box;
+    padding: 100rpx 40rpx;
+    text-align: center;
 }
 
 .content {
     width: 100%;
-    /* background: #ccc; */
+    height: 600rpx;
+    box-sizing: border-box;
+    padding: 40rpx;
+    text-align: center;
 }
 
 .footer {
     width: 100%;
-    /* background: #eee; */
+    box-sizing: border-box;
+    padding: 40rpx;
+    text-align: center;
 }
