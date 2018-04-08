@@ -1,0 +1,5 @@
+<view class="answer" style="background:url('../../assets/bg.jpg')">
+    <view class="title">{{title}}</view>
+    <view class="content">{{content}}</view>
+    <view class="footer">{{footer}}</view>
+</view>
