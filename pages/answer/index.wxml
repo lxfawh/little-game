@@ -3,6 +3,6 @@
     <view class="content">
         <view wx:for="{{option}}" class="option" bindtap="submit" data-index="{{item.code}}" wx:key="*this">{{item.name}}</view>
     </view>
-    <view class="footer">{{footer}}</view>
+    <view class="footer">{{text}}</view>
     <view>{{index}}/5</view>
 </view>
