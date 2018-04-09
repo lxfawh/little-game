@@ -6,7 +6,8 @@ Page({
         option: [],
         text: '',
         explain: [],
-        options: []
+        options: [],
+        result: ''
     },
     onLoad() {
         //从题库随机获取5道题
@@ -37,9 +38,11 @@ Page({
         let options = this.data.options
         let index = this.data.index
         if (index >= options.length) {
-            wx.showModal({
-                title: '显示结果'
+
+            wx.navigateTo({
+                url: `../result/index?result=${this.getResult()}`
             })
+
         } else {
             this.setData({
                 title: options[index].title,
@@ -49,14 +52,14 @@ Page({
             index++
             this.setData({ index })
         }
-        
-        this.getResult()
+
+
     },
     getResult() {
         let count = ['一', '两', '三'][~~(Math.random() * 3)]
         let unit = ['勺', '杯', '桶'][~~(Math.random() * 3)]
         let props = app.globalData.props[~~(Math.random() * app.globalData.props.length)]
-        let result = count + unit + props
-        console.log(result)
+
+        return count + unit + props
     }
 })

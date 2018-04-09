@@ -1,0 +1,11 @@
+<view class="answer" style="background:url('../../assets/bg.png');background-size: 100% 100%">
+    <view class="title">{{title}}</view>
+    <view class="content">
+        <view wx:for="{{option}}" class="option" bindtap="submit" data-index="{{item.code}}" wx:key="*this" style="background:url('../../assets/bg-item.png');background-size: 100% 100%">{{item.name}}</view>
+    </view>
+    <view class="footer">
+        <image class="gold" src="../../assets/gold.png"></image>
+        <view class="text">{{text}}</view>
+    </view>
+    <view class="pagination">{{index}}/5</view>
+</view>

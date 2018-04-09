@@ -1,12 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/answer/index"
+    "pages/question/index",
+    "pages/result/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#fffd00",
+    "navigationBarTitleText": "上帝在创造我的时候",
     "navigationBarTextStyle": "black"
   }
 }
