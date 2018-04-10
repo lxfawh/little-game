@@ -56,7 +56,7 @@ Page({
 
     },
     getResult() {
-        let count = ['一', '两', '三'][~~(Math.random() * 3)]
+        let count = ['一', '两'][~~(Math.random() * 2)]
         let unit = ['勺', '杯', '桶'][~~(Math.random() * 3)]
         let props = app.globalData.props[~~(Math.random() * app.globalData.props.length)]
 

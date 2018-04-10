@@ -7,7 +7,6 @@ Page({
     userInfo: {}
   },
   onLoad: function () {
-    console.log(app.globalData.userInfo)
     this.setData({
       userInfo: app.globalData.userInfo
     })
