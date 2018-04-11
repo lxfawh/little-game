@@ -22,8 +22,6 @@ Page({
 
     let result = temp.map(item => {
       switch (item) {
-        case 'common':
-          return _this.getCom()
         case 'lib1':
           return _this.replaceProps(_this.data.lib1[~~(Math.random() * _this.data.lib1.length)])
         case 'lib2':
@@ -47,7 +45,9 @@ Page({
   },
   // 替换属性
   replaceProps(str) {
-    if (/props/.test(str)) {
+    if (/common/.test(str)) {
+      return str.replace(/common/, this.getCom())
+    } else if (/props/.test(str)) {
       return str.replace(/props/g, this.data.props[~~(Math.random() * this.data.props.length)])
     } else {
       return str

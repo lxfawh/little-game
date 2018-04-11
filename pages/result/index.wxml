@@ -2,7 +2,7 @@
 <view class="content">
   <view class="title">上帝在创造{{userInfo.nickName}}的时候</view>
   <view class="result" style="background:url('../../assets/bg-result.png');background-size: 100% 100%">
-    <view wx:for="{{result}}">{{item}}</view>
+    <view wx:for="{{result}}" wx:key="{{*this}}">{{item}}</view>
   </view>
   <view class="submit" style="background:url('../../assets/bg-item.png');background-size: 100% 100%">保存图片</view>
   <view class="submit" style="background:url('../../assets/bg-item.png');background-size: 100% 100%">去转发</view>
